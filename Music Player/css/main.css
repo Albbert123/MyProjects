@@ -1,0 +1,91 @@
+/* Common */
+* { box-sizing: border-box;}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: lightgray;
+    display: flex; /*ahora es un container con hijos (main)*/
+    justify-content: center; /*en el centro del eje x*/
+    align-items: center; /*en el centro del eje y*/
+}
+
+/* player */
+.player {
+    min-width: 320px;
+    background-image: linear-gradient(black, gray);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+} 
+
+/* titulo */
+.titulo {
+    margin-top: 0;
+    text-align: center;
+}
+
+/* cover */
+.cover {
+    width: 128px;
+    height: auto; /*opcional*/
+    border-radius: .3rem;
+    /* para centrarlo */
+    display: block;
+    margin: 0 auto 1rem auto; /*arriba derecha abajo izquierda*/
+}
+
+/* progress bar */
+.progress-container {
+    height: .6rem;
+    background-color: lightgray;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    background-color: goldenrod;
+    width: 0%;
+    height: 100%; /*100% respecto el contenedor del padre (progress-container)*/
+}
+
+/* controls */
+.controls {
+    display: flex; /*ahora es un container con hijos (los 3 controles)*/
+    justify-content: space-evenly; /*reparte el espacio*/
+    margin-bottom: 1rem;
+}
+
+.controls button {
+    background-color: transparent;
+    border: none;
+}
+
+.controls i {
+    font-size: 1.7rem;
+    color: white;
+}
+
+/* songs */
+.songs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.songs li {
+    margin-bottom: 1rem;
+}
+
+.songs a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.songs a.activo {
+    color: white;
+    font-weight: bold;
+}
