@@ -1,0 +1,68 @@
+/* Common */
+* {box-sizing: border-box;}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: lightgray;
+    display: flex; /*ahora es un container con hijos (main)*/
+    justify-content: center; /*en el centro del eje x*/
+    align-items: center; /*en el centro del eje y*/
+}
+
+/* calculadora */
+.calculadora {
+    width: 400px;
+    height: 600px;
+    background-color: #615756;
+    display: grid; /*matriz*/
+    grid-template-columns: repeat(4, 80px); /*4 columnas*/
+    grid-template-rows: 130px repeat(6, 80px); /*6 filas, la primera con mas espacio(110)*/
+    justify-content: center;
+    border-radius: 20px; /*redondear esquinas*/
+    padding-top: 20px;
+}
+
+.calculadora button {
+    font-size: 1.5rem;
+    background-color: #539987;
+    border-radius: 50%;
+    border: 2px #333333 solid;
+    margin: 2px;
+}
+
+.calculadora button:hover {
+    background-color: silver;
+}
+
+/* display */
+.display {
+    height: 120px;
+    background-color: #344055;
+    opacity: .7;
+    grid-column: 1/-1;
+    border: 2px #333333 solid;
+    text-align: end;
+    padding: 10px 0;
+}
+
+/*botones*/
+.borrar-todo {
+    grid-column: span 2;
+}
+
+/* valor superior */
+.valor-superior {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* valor inferior */
+.valor-inferior {
+    color: white;
+    font-size: 2rem;
+}
